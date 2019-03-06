@@ -1,0 +1,29 @@
+package tsys.codingtest;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class AscendingDecendingMixed {
+	private static ArrayList<Integer> mArrayList;
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		mArrayList = new ArrayList<Integer>();
+
+		Scanner sc = new Scanner(System.in);
+		int n = 0;
+
+		while (sc.hasNextInt()) {
+			if (n == -1) {
+				break;
+			}
+			n = sc.nextInt();
+			mArrayList.add(n);
+		}
+		for (int i = 0; i < mArrayList.size(); i++) {
+			System.out.print(" " + mArrayList.get(i));
+		}
+		sc.close();
+	}
+
+}

@@ -1,0 +1,41 @@
+package cafe24.codingtest;
+
+public class MyStack {
+	int top;
+	String[] stack;
+	int size;
+
+	public MyStack(int size) {
+		top = -1;
+		stack = new String[size];
+		this.size = size;
+	}
+
+	public void push(String value) {
+		if (stack.length > 3) {
+			size();
+		} else {
+			stack[++top] = value;
+		}
+
+	}
+
+	public String pop() {
+		System.out.println(stack[top] + " pop!!");
+		return stack[top--];
+	}
+
+	public void printStack() {
+		System.out.println("---------stack list-------------");
+		for (int i = top; i >= 0; i--) {
+			System.out.println(stack[i]);
+		}
+		System.out.println("---------stack list-------------");
+	}
+
+	public int size() {
+		int i = stack[++size];
+		return i;
+	}
+
+}

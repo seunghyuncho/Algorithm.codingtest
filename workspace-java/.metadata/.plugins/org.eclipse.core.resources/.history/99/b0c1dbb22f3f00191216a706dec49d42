@@ -1,0 +1,28 @@
+package tsys.codingtest;
+
+public class MinValue {
+
+	public static int getMinValue(int arr1[], int index) {
+		int p = 0;
+		if (index == 0) {
+			return arr1[p];
+		}
+		if (arr1[index] > arr1[index - 1]) {
+			arr1[index] = arr1[index - 1];
+			p = arr1[index];
+		} else {
+			return getMinValue(arr1, index - 1);
+		}
+		return p;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		int arr[] = { 10, 2, 14, 13, 12, 11, 10, 9 };
+
+		System.out.println(getMinValue(arr, 7));
+
+	}
+
+}

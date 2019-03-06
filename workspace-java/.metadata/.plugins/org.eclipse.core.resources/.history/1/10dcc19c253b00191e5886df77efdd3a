@@ -1,0 +1,31 @@
+package cafe24.codingtest;
+
+public class Stack_Size {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		MyStack st = new MyStack(3);
+
+		st.push(5);
+		st.push(4);
+		st.push(3);
+		st.push(2);
+		st.push(1);
+
+		st.printStack();
+
+		st.pop();
+		st.pop();
+		st.pop();
+		st.pop();
+
+		st.peek();
+
+		st.push(10);
+		st.pop();
+
+		st.printStack();
+
+	}
+
+}
